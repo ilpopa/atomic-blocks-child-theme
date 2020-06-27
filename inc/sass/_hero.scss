@@ -1,0 +1,19 @@
+.hero-container {
+    width: 100%;
+    max-width: 1128px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.hero-body {
+    height: 85vh;
+    background-blend-mode: multiply;
+    background-color: $hero-overlay-bg;
+    .hero-text-container {
+        display: block;
+        width: 100%;
+        color: $hero-text-color;
+        text-shadow: 0.125em 0.125em 0.125em rgba(0,0,0,.125);
+    }
+}

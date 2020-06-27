@@ -72,10 +72,23 @@
             <div class="block-hero_wrapper" style="text-align:<?php echo $orientation; ?>">
                 <h1 class="block-hero_heading" style="font-size: <?php echo $heading_size; ?>em; color:<?php echo $font_color; ?>"><?php block_field( 'heading');?></h1>
                 <p class="block-hero_text" style="color:<?php echo $font_color; ?>"><?php block_field( 'text'); ?></p>
+               
+                <?php
+                $url1 = block_field( 'button-1-url', false );
+                $url2 = block_field( 'button-2-url', false ); ?>
+
                 <div>
-                    <a class="block-hero_button-1" href="<?php block_field( 'button-1-url'); ?>"><?php block_field( 'button-1-text'); ?></a>
-                    <a class="block-hero_button-2" style="color:<?php echo $font_color; ?>" href="<?php block_field( 'button-2-url'); ?>"><?php block_field( 'button-2-text'); ?></a>
-                </div>
+                <?php if( !empty( $url1 ) || !empty( $url2 )  ) : ?> 
+                    <?php
+                    if( !empty( $url1 ) ) : ?>   
+                        <a class="block-hero_button-1" href="<?php block_field( 'button-1-url'); ?>"><?php block_field( 'button-1-text'); ?></a> 
+                    <?php endif; ?>
+                    <?php
+                    if( !empty( $url2 ) ) : ?>   
+                        <a class="block-hero_button-2" style="color:<?php echo $font_color; ?>" href="<?php block_field( 'button-2-url'); ?>"><?php block_field( 'button-2-text'); ?></a>
+                    <?php endif; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>   
     </div>
