@@ -1,19 +1,106 @@
 .hero-container {
     width: 100%;
-    max-width: 1128px;
+    max-width: $breakpoint-desktop;
     height: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
 }
 .hero-body {
-    height: 85vh;
+    height: 105vh;
+    background-size: cover;
+    background-position: center center;
     background-blend-mode: multiply;
     background-color: $hero-overlay-bg;
+    padding-bottom: 8rem;
+    clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 8rem), 0px 100%);
     .hero-text-container {
         display: block;
         width: 100%;
         color: $hero-text-color;
-        text-shadow: 0.125em 0.125em 0.125em rgba(0,0,0,.125);
+        padding: 2em;
+        text-shadow: $text-shadow;
+        max-width: 42em;
+        position: relative;
+        z-index: 2;
+        &:before {
+            content: '';
+            display: block;
+            width: 34em;
+            height: 45vh;
+            width: 65%;
+            border: solid $border-color 10px;
+            position: absolute;
+            top: -1em;
+            left: -1em;
+            z-index: -1;
+        }
+        @include mq(desktop) {
+            &:before {
+                width: 34em;
+                height: 60vh;
+            }
+        }
+        h2 {
+            color: $hero-title-color;
+            font-size: 2em;
+            font-weight: 700;
+            @include mq(tablet) {
+                font-size: 2.8em;
+            }
+            @include mq(desktop) {
+                font-size: 3.8em;
+            }
+        }
     }
+}
+/* CoverR video*/
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+
+.video-container video.fillWidth {
+    width: 100%;
 }

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$default-font: 'Montserrat', sans-serif;
+$heading-font: 'Josefin Sans', sans-serif;
+
+body.atomilapsi {
+    font-family: $default-font;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    margin: 0px;
+    h1,h2,h3,h4,h5,h6 {
+        font-family: $heading-font;
+    }
+}

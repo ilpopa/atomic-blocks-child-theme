@@ -1,6 +1,31 @@
+/* Colors */
+:root {
+    --main-bg-color: #1d1d1d;
+    --color-highlight: #8d2189;
+    --color-secondary:  #1e1259;
+    --default-text-color: #272c30;
+}
+/* Breakpoints */
+$breakpoint-mobile: 550px;
+$breakpoint-tablet: 1000px;
+$breakpoint-desktop: 1200px;
+
+/* Header */
+$header-position: fixed;
+$header-bg: transparent;
+$header-fixed-bg: #fff;
+
+/* Navigaatio */
+$menu-color: #fff;
+$menu-color-fixed: var(--default-text-color);
+$text-shadow: 0.125em 0.125em 0.125em rgba(0,0,0,.125);
 /* Logo */
-$logo-width: 100px;
+$logo-width: 80px;
 
 /* Hero */
-$hero-overlay-bg: rgba(0,0,0,0.35);
+$hero-overlay-bg: #d5d5d5;
+$hero-title-color: var(--color-highlight);
 $hero-text-color: #fff;
+
+/* Borders */
+$border-color: #343434;

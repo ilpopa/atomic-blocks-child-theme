@@ -1,0 +1,14 @@
+.site-header {
+    position: $header-position;
+    background-color: $header-bg;
+    transition: all .25s linear; 
+    &.header-scroll {
+        background-color: $header-fixed-bg;
+    }
+}
+.site-identity {
+    padding: 1em 0;
+}
+.site-title-wrap {
+    margin-top: 1em;
+}

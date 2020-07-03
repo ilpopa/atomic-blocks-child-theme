@@ -1,4 +1,10 @@
 .custom-logo-link {
     display: block;
-    max-width: $logo-width;
+    width: $logo-width;
+    transition: all .25s linear;
+}
+.header-scroll {
+    .custom-logo-link {
+        width: 50px;
+    }
 }

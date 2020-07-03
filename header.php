@@ -18,7 +18,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('atomilapsi'); ?>>
 
 <header id="masthead" class="site-header">
 	<div class="search-drawer" aria-expanded="false" role="region">
